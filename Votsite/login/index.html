@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+      .sign-pop {
+        width: 350px;
+        position: absolute;
+        top: 115px;
+        right: 550px;
+        text-align: center;
+        background-color: rgb(54, 85, 172);
+        border-radius: 20px;
+      }
+      .sign-pop h1 {
+        margin-top: 20px;
+        color: white;
+      }
+      .sign-pop .age {
+        width: 320px;
+        margin-top: 20px;
+        height: 40px;
+        border: 1px solid;
+        border-radius: 10px;
+        outline: none;
+        text-align: center;
+      }
+      .sign-pop .age:hover {
+        border-color: violet;
+        outline: none;
+      }
+      .sign-pop #btn {
+        height: 40px;
+        width: 130px;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 160px;
+        font-size: 18px;
+        color: white;
+        background-color: transparent;
+        border: 2px solid rgb(184, 105, 16);
+        border-radius: 20px;
+        background-color: rgb(6, 6, 88);
+        margin-bottom: 20px;
+      }
+      .sign-pop #btn:hover {
+        background-color: rgb(25, 241, 169);
+        cursor: pointer;
+      }
+      .cancle {
+        position: absolute;
+        top: 115px;
+        right: 560px;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 1000;
+        color: white;
+      }
+      .cancle:hover {
+        color: red;
+      }
+
+      .login {
+        height: fit-content;
+      }
+      .login .password {
+        width: 320px;
+        margin-top: 25px;
+        height: 40px;
+        border: 1px solid;
+        border-radius: 10px;
+        outline: none;
+        text-align: center;
+      }
+      .error {
+        color: red;
+        margin-top: 0px;
+      }
+      .hidepop {
+        display: none;
+      }
+      .cancletwo {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="cancle">X</span>
+    <div class="sign-pop login">
+      <form action="../document/index.html" onsubmit="return loginf()">
+        <h1>LogIn</h1>
+        <input
+          type="text"
+          name="username"
+          class="nepal age user_name"
+          id="user"
+          placeholder="Enter your name"
+        />
+        <p id="showpara" class="error"></p>
+        <input
+          type="text"
+          name="email"
+          class="age email"
+          id="email"
+          placeholder="Enter your Email"
+        />
+        <p id="showparatwo" class="error"></p>
+        <input
+          type="password"
+          name="password"
+          class="nepal age password"
+          id="pass"
+          placeholder="Enter your password"
+        />
+        <p id="showparathree" class="error"></p>
+        <input type="submit" id="btn" />
+      </form>
+    </div>
+
+    <script>
+      //Login validation
+      function loginf() {
+        var userName = document.getElementById("user");
+        var email = document.getElementById("email");
+        var password = document.getElementById("pass");
+
+        //username VALIDATION
+        if (userName.value.trim() == "") {
+          document.getElementById("showpara").innerHTML = "Enter your name";
+          return false;
+        } else if (!/^[a-zA-Z\s]+$/.test(userName.value)) {
+          document.getElementById("showpara").innerHTML =
+            "enter proper character name";
+          return false;
+        } else {
+          document.getElementById("showpara").innerHTML = "";
+        }
+
+        //email VALIDATION
+
+        if (email.value == "") {
+          document.getElementById("showparatwo").innerHTML = "must be enter";
+          return false;
+        } else if (email.value < 8) {
+          document.getElementById("showparatwo").innerHTML = "atleast 8 ";
+          return false;
+        } else if (email.value > 20) {
+          document.getElementById("showparatwo").innerHTML =
+            "too large short it";
+          return false;
+        } else if (email.value.indexOf("@") <= 0) {
+          document.getElementById("showparatwo").innerHTML =
+            "@invalid position";
+          return false;
+        } else if (email.value.charAt(email.value.length - 4) != ".") {
+          document.getElementById("showparatwo").innerHTML = "invalid email";
+          return false;
+        } else {
+          document.getElementById("showparatwo").innerHTML = "";
+        }
+
+        //password validation
+        if (password.value == "") {
+          document.getElementById("showparathree").innerHTML = "must be enter";
+          return false;
+        } else if (password.value.length < 5) {
+          document.getElementById("showparathree").innerHTML = "atleast 5";
+          return false;
+        } else if (password.value.length > 20) {
+          document.getElementById("showparathree").innerHTML = "too large";
+          return false;
+        } else {
+          document.getElementById("showparathree").innerHTML = "";
+          alert("First Step done!!!");
+          return true;
+        }
+      }
+
+      //when user click on cancel button pop will desappear
+      // const cancelbtn = document.querySelector(".cancle");
+      // const signpop = document.querySelector(".sign-pop");
+
+      // cancelbtn.addEventListener("click", () => {
+      //   signpop.classList.add("hidepop");
+      //   cancelbtn.classList.add("cancletwo");
+      // });
+
+      //when user click on submit counrty and age validation pop up shows
+      // const submitbtn = document.getElementById("btn");
+      // submitbtn.addEventListener("click", () => {
+      //   window.location.href = "Votsite/document/index.html";
+      // });
+    </script>
+  </body>
+</html>

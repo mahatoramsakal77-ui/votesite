@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+        font-family: serif;
+      }
+
+      form {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        text-align: center;
+        background-color: rgb(41, 39, 36);
+        border: 2px solid red;
+      }
+      .form {
+        width: 450px;
+        height: 30px;
+        border-radius: 10px;
+        border-style: groove;
+        margin-right: 40px;
+        margin-left: 10px;
+        border-color: aquamarine;
+      }
+      .form:focus {
+        outline: none;
+      }
+      .form:hover {
+        border-color: blue;
+      }
+      label {
+        margin-left: 30px;
+        font-size: 20px;
+        color: white;
+      }
+
+      .fourth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        border: 2px dashed rgba(45, 52, 73);
+        background-color: rgb(77, 75, 74);
+        height: 250px;
+      }
+      .pfile {
+        display: none;
+      }
+      .profile {
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .profile:hover {
+        color: red;
+      }
+
+      .pp {
+        height: 200px;
+        width: fit-content;
+        margin-left: 300px;
+        overflow: hidden;
+      }
+      h1 {
+        color: red;
+        margin-bottom: 50px;
+      }
+
+      #submit {
+        height: 40px;
+        width: 120px;
+        margin-top: 30px;
+        text-align: cn;
+        text-align: center;
+        color: blue;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .error {
+        color: red;
+        margin-top: 0px;
+        margin-bottom: 60px;
+      }
+      .first {
+        display: flex;
+      }
+      .second {
+        display: flex;
+      }
+      #pdistrict {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 250px;
+      }
+
+      .errordoc {
+        color: red;
+        font-size: 16px;
+        margin-left: 10px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="../confirm/index.html" onsubmit="return valid() && fileValidation()">
+      <h1>Must be Match with Identity</h1>
+
+      <div class="first">
+        <label for="name" class="space"
+          >Full-Name <input type="text" name="name" class="form" id="fname" />
+          <p class="error" id="pname"></p>
+        </label>
+
+        <label for="village"
+          >Village
+          <input type="text" name="village" class="form" id="fvillage" />
+          <p class="error" id="pvillage"></p>
+        </label>
+      </div>
+      <div class="second">
+        <label for="pality"
+          >Municipality
+          <input type="ward" name="pality" class="form" id="fpality" />
+          <p class="error" id="ppality"></p>
+        </label>
+
+        <label for="ward" class="space"
+          >Ward <input type="ward" name="ward" class="form" id="fward" />
+          <p class="error" id="pward"></p>
+        </label>
+      </div>
+      <div class="third">
+        <label for="province" class="space"
+          >Province
+          <select name="province" class="form">
+            <option value="1">Madhesh</option>
+            <option value="2">Koshi</option>
+            <option value="3">Bagmati</option>
+            <option value="4">Gandaki</option>
+            <option value="5">Karnali</option>
+            <option value="6">Lumbani</option>
+            <option value="7">Sudurpasch</option>
+          </select>
+        </label>
+        <label for="district"
+          >District
+          <input type="text" name="district" class="form" id="fdistrict" />
+          <p class="error" id="pdistrict"></p>
+        </label>
+      </div>
+      <div class="fourth">
+        <label for="pphoto" class="profile"
+          >Upload Your Password Size photo</label
+        >
+        <input type="file" name="pp" class="pfile" id="pphoto" />
+        <img src="pplogo.png" alt="pplogo" class="pp" />
+        <p class="errordoc" id="ppsize"></p>
+      </div>
+      <!-- voter Id -->
+      <div class="fourth">
+        <label for="voterid" class="profile"
+          >Upload Your Nepali Voter Id
+        </label>
+        <input type="file" name="voter" id="voterid" class="cvi pfile" />
+        <img src="voter.jpg" alt="voterid pic" class="pp votep" />
+        <p class="errordoc cvip"></p>
+      </div>
+
+      <div class="fourth">
+        <label for="citifront" class="profile"
+          >Upload Citizenship Front Side
+        </label>
+        <input type="file" name="citizen" id="citifront" class="cvi pfile" />
+        <img
+          src="citifront.jpeg"
+          alt="citizenship photo"
+          class="pp"
+          id="citipic"
+        />
+       <p class="errordoc cvip"></p>
+      </div>
+      <div class="fourth seven">
+        <label for="citiback" class="profile"
+          >Upload Citizenship Back Side
+        </label>
+        <input type="file" name="citizen" id="citiback" class="cvi pfile" />
+        <img src="citifront.jpeg" alt="citizenship photo" class="pp picciti" />
+       <p class="errordoc cvip"></p>
+      </div>
+      <div class="fourth">
+        <label for="Nid" class="profile"
+          >Upload Your Nation Identity Card</label
+        >
+        <input type="file" name="Nid" id="Nid" class="cvi pfile" />
+        <img src="id.png" alt="Nid photo" class="pp nidpic" />
+        <p class="errordoc cvip"></p>
+      </div>
+
+      <input type="submit" name="" id="submit" />
+    </form>
+
+    <script>
+      let profile_pic = document.querySelector(".pp");
+      let inputFile = document.querySelector(".pfile");
+      inputFile.onchange = () => {
+        profile_pic.src = URL.createObjectURL(inputFile.files[0]);
+      };
+
+      //voter id
+      let voter = document.querySelector(".votep");
+      let voterFile = document.getElementById("voterid");
+      voterFile.onchange = () => {
+        voter.src = URL.createObjectURL(voterFile.files[0]);
+      };
+
+      //citizen front side
+      let citizen = document.getElementById("citipic");
+      let citizenFile = document.getElementById("citifront");
+      citizenFile.onchange = () => {
+        citizen.src = URL.createObjectURL(citizenFile.files[0]);
+      };
+
+      //citizenship back side
+      let citizenback = document.querySelector(".picciti");
+      let citizenFileback = document.querySelector("#citiback");
+      citizenFileback.onchange = () => {
+        citizenback.src = URL.createObjectURL(citizenFileback.files[0]);
+      };
+
+      //national identity card
+      let nationalId = document.querySelector(".nidpic");
+      let nationalFile = document.querySelector("#Nid");
+      nationalFile.onchange = () => {
+        nationalId.src = URL.createObjectURL(nationalFile.files[0]);
+      };
+
+      //form validation
+      function valid() {
+        var vname = document.getElementById("fname").value;
+        var vvillage = document.getElementById("fvillage").value;
+        var vpality = document.getElementById("fpality").value;
+        var vward = document.getElementById("fward").value;
+        var vdistrict = document.getElementById("fdistrict").value;
+
+        //Name Validation
+        if (vname.trim() == "") {
+          document.getElementById("pname").innerHTML = "must be enter";
+          return false;
+        }
+        if (!/^[a-zA-Z\s]+$/.test(vname)) {
+          document.getElementById("pname").innerHTML = "only character allowed";
+          return false;
+        } else {
+          document.getElementById("pname").innerHTML = "";
+        }
+
+        //village
+        if (vvillage.trim() == "") {
+          document.getElementById("pvillage").innerHTML = "must be enter";
+          return false;
+        } else if (!/^[a-zA-Z\s]+$/.test(vvillage)) {
+          document.getElementById("pvillage").innerHTML =
+            "only character allowed";
+          return false;
+        } else {
+          document.getElementById("pvillage").innerHTML = "";
+        }
+
+        //municipality
+        if (vpality.trim() == "") {
+          document.getElementById("ppality").innerHTML = "must be enter";
+          return false;
+        } else if (!/^[a-zA-Z\s]+$/.test(vpality)) {
+          document.getElementById("ppality").innerHTML =
+            "only character allowed";
+          return false;
+        } else {
+          document.getElementById("ppality").innerHTML = "";
+        }
+
+        //ward validation
+        if (vward.trim() == "") {
+          document.getElementById("pward").innerHTML = "Must be enter";
+          return false;
+        } else if (vward <= 0 || vward > 6743) {
+          document.getElementById("pward").innerHTML = "Enter valid ward";
+          return false;
+        } else {
+          document.getElementById("pward").innerHTML = "";
+        }
+
+        //district validation
+        if (vdistrict.trim() == "") {
+          document.getElementById("pdistrict").innerHTML = "must be enter";
+          return false;
+        } else if (!/^[a-zA-Z\s]+$/.test(vdistrict)) {
+          document.getElementById("pdistrict").innerHTML =
+            "only character allowed";
+          return false;
+        } else {
+          document.getElementById("pdistrict").innerHTML = "";
+          return true;
+        }
+      }
+
+      // ...............................File validation
+
+      function fileValidation() {
+        let isvalid = true;
+        let hasfile = false;
+
+        var photo = document.getElementById("pphoto").files[0];
+
+        //......................pp size photo validation..........
+        if (!photo) {
+          document.getElementById("ppsize").innerHTML = "Upload pp size photo";
+          isvalid = false;
+        } else {
+          const allowedTypes = ["image/jpeg", "image/png"];
+          if (!allowedTypes.includes(photo.type)) {
+            document.getElementById("ppsize").innerHTML =
+              "only jpeg or png allowed";
+            isvalid = false;
+          } else if (photo.size > 2 * 1024 * 1024) {
+            document.getElementById("ppsize").innerHTML = "max size 2MB";
+            isvalid = false;
+          } else {
+            document.getElementById("ppsize").innerHTML = "";
+          }
+        }
+        //....................citizenship/voter/NId validation
+        var cviinput = document.querySelectorAll(".cvi");
+        var errorfileds = document.querySelectorAll(".cvip");
+
+        cviinput.forEach((input ,index) => {
+          const error = errorfileds[index];
+
+          if(input.files.length === 0)
+        {
+          error.innerHTML = "Upload a img";
+          isvalid = false;
+        } else{
+          hasfile = true;
+
+          const file = input.files[0];
+          const allowedimg = ["image/jpeg", "image/png", "application/pdf"];
+
+          if(!allowedimg.includes(file.type))
+        {
+          error.innerHTML = "only jpeg,png and pdf allowed";
+          isvalid = false;
+        } else if(file.size > 5 * 1024 * 1024)
+        {
+          error.innerHTML = "max size 5MB";
+          isvalid = false;
+        }else{
+          error.innerHTML = "";
+          alert("successfully submited!!1");
+        }
+        }
+        });
+
+        return isvalid;
+      }
+
+      // document.getElementById("fname").addEventListener("input", function () {
+      //   document.getElementById("pname").innerHTML = "";
+      // });
+      // document.getElementById("femail").addEventListener("input", function () {
+      //   document.getElementById("pemail").innerHTML = "";
+      // });
+      // document
+      //   .getElementById("fdistrict")
+      //   .addEventListener("input", function () {
+      //     document.getElementById("pdistrict").innerHTML = "";
+      //   });
+      // document.getElementById("fpality").addEventListener("input", function () {
+      //   document.getElementById("ppality").innerHTML = "";
+      // });
+      // document
+      //   .getElementById("fvillage")
+      //   .addEventListener("input", function () {
+      //     document.getElementById("pvillage").innerHTML = "";
+      //   });
+      // document.getElementById("fward").addEventListener("input", function () {
+      //   document.getElementById("pward").innerHTML = "";
+      // });
+    </script>
+  </body>
+</html>

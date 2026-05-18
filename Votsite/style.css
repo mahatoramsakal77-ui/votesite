@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+body
+{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  
+}
+
+/* style on nav */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  height: 50px;
+  background-color: rgb(19, 17, 17);
+}
+.leftnav {
+  margin-left: 130px;
+  font-size: larger;
+}
+.leftnav h1{
+  color: red;
+  font-style: oblique;
+}
+
+.rightnav ul {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+  list-style: none;
+
+}
+.rightnav ul a {
+  text-decoration: none;
+  margin-right: 30px;
+  color: white;
+  font-size: 18px;
+}
+.rightnav ul a:hover {
+  text-decoration: underline;
+  color: rgb(252, 16, 16);
+}
+
+ 
+
+/* Describing voting */
+.intovoting {
+  display: flex;
+  justify-content: space-evenly;
+}
+.intovoting .text-detail {
+  margin: 200px;
+  font-size: 18px;
+}
+
+.text-detail h1 {
+  color: red;
+}
+
+.nepalimg {
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 200px;
+  margin-right: 150px;
+}
+
+.wantsforvote 
+{
+  margin-left: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+.wantsforvote li
+{
+  list-style: none;
+}
+.wantsforvote h1
+{
+  color: red;
+}
+
+/* Candidator List */
+.onecandi {
+  text-align: center;
+  width: 280px;
+  background-color: rgb(39, 3, 3);
+  margin-left: 50px;
+}
+.onecandi .candi {
+  height: 300px;
+  width: 270px;
+  border-radius: 10%;
+  margin-top: 0px;
+}
+.onecandi .name,h1
+{
+  overflow: hidden;
+  color: gold;
+}
+.candi-sign {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+.onecandi .vote-btn {
+  margin-top: 20px;
+  height: 30px;
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.onecandi .vote-btn:hover
+{
+  background-color: rgba(255, 0, 64, 0.644);
+  color: white;
+  border-style: none;
+  cursor: pointer;
+}
+.candidator
+{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.two-candisection
+{
+  margin-top: 30px;
+}
+.candilist
+{
+  background-color: rgb(17, 16, 16);
+}
+.candilist h1
+{
+  text-align: center;
+  /* margin: 0px 0px 30px; */
+  color: red;
+}
+.candilist h2{
+  color: red;
+  text-align: center;
+  margin: 0px 0px 30px;
+}
+
+/* //........................contact */
+.contact
+{
+  background-color: red;
+  margin-top: 80px;
+}
+.leftfoot h1
+{
+ text-align: center;
+}
+.rightfoot h2
+{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* //.......................................................................responsive */
+@media only screen and (max-width : 700px)
+{
+  nav {
+    height: 40px;
+    width: 100%;
+    padding: 0 3vw;
+    position: relative;
+  }
+  .rightnav
+  {
+    font-size: 16px;
+  }
+  .rightnav ul a
+  {
+    margin-left: 20px;
+     color: red;
+  }
+
+  .intovoting
+  {
+    flex-direction: column-reverse;
+    margin-top: 0px;    
+  }
+  .text-detail p
+  {
+    font-size: 18px;
+    height: 100px;
+  }
+  .img-detail .nepalimg
+  {
+    position: absolute;
+    left: 1000px;
+    top: 50px;
+    height: 400px;
+    }
+
+    .candilist
+    {
+      margin-left: 800px;
+     }
+     .onecandi
+     {
+      margin: 40px;
+     }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>taking document</title>
+  <style>
+      body {
+        background-color: rgb(2, 2, 90);
+      }
+      .sign-pop {
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  top: 115px;
+  right: 550px;
+  text-align: center;
+  background-color: rgb(54, 85, 172);
+  border-radius: 20px;
+  height: fit-content;
+}
+.sign-pop h1 {
+  margin-top: 25px;
+  color: white;
+}
+.sign-pop .age {
+  width: 320px;
+  margin-top: 20px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+}
+.sign-pop .age:hover {
+  border-color: violet;
+  outline: none;
+}
+.sign-pop #btn {
+  height: 40px;
+  width: 130px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 160px;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(184, 105, 16);
+  border-radius: 20px;
+  background-color: rgb(6, 6, 88);
+  margin-bottom: 20px;
+}
+.sign-pop #btn:hover {
+  background-color: rgb(25, 241, 169);
+  cursor: pointer;
+}
+.cancle {
+  position: absolute;
+  top: 115px;
+  right: 560px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+}
+.cancle:hover {
+  color: red;
+}
+
+.error {
+  color: red;
+  margin-top: 0px;
+}
+
+  </style>
+</head>
+<body>
+   <span class="cancle">X</span>
+  <div class="sign-pop">
+   <form action="../infotwo/index.html" onsubmit="return validf()">
+     <h1>Eligible</h1>
+      <input type="text" name="country" class="nepal age" id="country" placeholder="Enter your country name">
+      <p id="showpara" class="error"></p>
+      <input type="number" name="age" class="age" id="age" placeholder="Enter your age">
+      <p id="showparatwo" class="error"></p>
+      <input type="submit" id="btn">
+   </form>
+  </div>
+
+
+  
+
+
+  <script>
+    function validf() {
+  //COUNTRY VALIDATION 
+  let countryname = document.getElementById("country");
+  if (countryname.value.trim() == "") {
+    document.getElementById("showpara").innerHTML = "fill the country name";
+    return false;
+  }
+  else if(!/^[a-zA-Z]+$/.test(countryname.value))
+  {
+    document.getElementById("showpara").innerHTML = "enter proper character name"; 
+    return false;
+  }
+  else if(countryname.value.trim().toLowerCase() !== "nepal")
+  {
+    document.getElementById("showpara").innerHTML = "only neplese allowed";
+    return false; 
+  }  
+  else
+  {
+     document.getElementById("showpara").innerHTML = "";
+  }
+
+  //AGE VALIDATION
+  let agevalid = document.getElementById("age").value;
+  if(agevalid.trim() == "")
+  {
+    document.getElementById("showparatwo").innerHTML = "enter your age";
+    return false; 
+  }
+  else if(agevalid < 16 || agevalid >= 120)
+  {
+    document.getElementById("showparatwo").innerHTML = "Not eligible for vote";
+    return false; 
+  }
+  else if(isNaN(agevalid))
+  {
+    document.getElementById("showparatwo").innerHTML = "only number allowed";
+    return false; 
+  }
+  else {
+    document.getElementById("showparatwo").innerHTML = "";
+    alert("second step successfull!!!");
+    return true;
+  }
+}
+
+//Accessing InfoTwo
+
+</script>
+</body>
+</html>

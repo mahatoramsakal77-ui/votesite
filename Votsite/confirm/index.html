@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm vote</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+      
+      section
+      {
+        border: 2px dotted red;
+        background-color: rgb(14, 14, 19);
+        /* background-color: white; */
+      }
+
+      .sign-click {
+        color: red;
+        text-align: center;
+        font-size: 50px;
+        margin: 10px;
+      }
+      .sign {
+        height: 100px;
+        width: 100px;
+        margin-top: 30px;
+        border-radius: 50px;
+        margin: 40px;
+        cursor: pointer;
+      }
+      .cycle {
+        background-color: white;
+      }
+      .sign:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+    </style>
+  </head>
+  <body>
+    <section class="Candidatesign">
+      <h1 class="sign-click">Select Again To Confirm</h1>
+      <a href="javascript:void(0)"><img src="sun.jpg" alt="sunlogo" class="sign sun" /></a>
+     <a href="javascript:void(0)"> <img src="star.png" alt="starlogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="cycle.png" alt="cyclelogo" class="sign cycle" /></a>
+     <a href="javascript:void(0)"> <img src="umbrella.png" alt="umbrellalogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="tree.jpg" alt="treelogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="lohar.png" alt="lohar" class="sign" /></a>
+    <a href="javascript:void(0)">  <img src="band.jpg" alt="band" class="sign" /></a>
+      <!-- another -->
+     <a href="javascript:void(0)"> <img src="kta.jpg" alt="ktalogo" class="sign" /></a>
+     <a href="javascript:void(0)"> <img src="sankh.jpg" alt="sankhlogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="seat.jpg" alt="seatlogo" class="sign cycle" /></a>
+      <a href="javascript:void(0)"><img src="balb.png" alt="balblogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="eyes.png" alt="eyeslogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="paddy.jpg" alt="paddylogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="hand.png" alt="handlogo" class="sign" /></a>
+      <!-- three -->
+     <a href="javascript:void(0)"> <img src="har.jpeg" alt="harlogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="kal.webp" alt="kallogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="kukur.jpg" alt="kukurlogo" class="sign cycle" /></a>
+      <a href="javascript:void(0)"><img src="full.png" alt="fulllogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="cow.png" alt="cowlogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="ciity.png" alt="ciitylogo" class="sign" /></a>
+      <a href="javascript:void(0)"><img src="bottle.jpeg" alt="bottle" class="sign" /></a>
+      <!-- four -->
+     <a href="javascript:void(0)"> <img src="soil.png" alt="soillogo" class="sign" /></a>
+    </section>
+
+
+    <script>
+
+const signs = document.querySelectorAll(".sign");
+// check on page load
+if (localStorage.getItem("voted")) {
+  disableAll();
+}
+
+signs.forEach(sign => {
+  sign.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    //  block if already voted
+    if (localStorage.getItem("voted") === "true") {
+      alert("You have already voted!");
+      return;
+    }
+
+    //  save vote
+    localStorage.setItem("voted", "true");
+
+    // highlight selected
+    sign.style.border = "4px solid green";
+    sign.style.opacity = "0.6";
+
+    // disable all
+    disableAll();
+
+    alert("Vote confirmed!");
+  });
+});
+
+function disableAll() {
+  signs.forEach(s => {
+    s.style.pointerEvents = "none"; // disable clicks
+    s.style.opacity = "0.5";
+
+    // extra safety: remove click events
+    s.replaceWith(s.cloneNode(true));
+  });
+}
+
+
+
+
+    </script>
+  </body>
+</html>

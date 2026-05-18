@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Info</title>
+  <style>
+    body
+    {
+        background-color: rgb(2, 2, 90);
+    }
+
+    form
+    {
+      position: absolute;
+      right: 500px;
+      padding: 50px;
+      width: 300px;
+      height: fit-content;
+      background-color: lab(49.91% 6.13 -21.48);
+      z-index: 10000;
+    }
+    h1
+    {
+      color: rgb(0, 255, 115);
+      margin-top: 0px;
+      text-align: center;
+      font-family: serif;
+    }
+    .label
+    {
+      color: white;
+      font-size: 18px;
+      font-family: serif;
+    }
+    .info
+    {
+      width: 300px;
+      height: 30px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .info:focus
+    {
+      outline: none;
+    }
+     .info:hover
+    {
+      border-color: blueviolet;
+    }
+    
+    #submit
+    {
+      height: 40px;
+    width: 120px;
+    font-size: 18px;
+    font-family: serif;
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    }
+    #submit:hover
+    {
+      color: red;
+      background-color: rgb(48, 9, 9);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="">
+    <h1>Enter Correct Info</h1>
+    <label for="name" class="label">Full-Name <input type="text" name="name" class="info"></label>
+    <label for="province" class="label">Province 
+      <select name="province" class="info">
+         <option value="1">Madhesh</option>
+        <option value="2">Koshi</option>
+        <option value="3">Bagmati</option>
+        <option value="4">Gandaki</option>
+        <option value="5">Karnali</option>
+        <option value="6">Lumbani</option>
+        <option value="7">Sudurpasch</option>
+      </select>
+    </label>
+    <label for="district" class="label">District <input type="text" name="district" class="info"></label>
+    <label for="village" class="label">Village <input type="text" name="address" class="info"></label>
+    <label for="ward" class="label">Ward <input type="number" name="ward" class="info"></label>
+    <label for="pality" class="label">Municipality <input type="text" name="pality" class="info"></label>
+    <input type="submit" name="submit" id="submit">
+  </form>
+
+
+</body>
+</html>
