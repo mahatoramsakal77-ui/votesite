@@ -1,0 +1,457 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  font-family: serif;
+}
+
+nav
+{
+      height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left
+{
+  margin-top: 15px;
+  margin-right: 500px;
+  color: red;
+}
+
+
+.right .country
+{
+  height: 20px;
+  border-radius: 80%;
+  margin-top: 10px;
+  display: none;
+}
+.right .active
+{
+  display: block;
+}
+
+.country-logo img
+{
+ position: absolute;
+right: 265px;
+bottom: 586px;
+cursor: pointer;
+}
+.right .country-logo , #firstselection , #secondselection 
+{
+  margin-top: 15px;
+}
+select-section select
+{
+  height: 20px;
+    width: 65px;
+    border-radius: 50%;
+    border-color: white;
+    background-color: white;
+    margin-left: 150px;
+    cursor: pointer;
+    outline: none;
+}
+
+select-section #secondselection
+{
+  margin-left: 20px;
+}
+
+#firstselection:hover
+{
+  color: red;
+}
+
+#secondselection:hover
+{
+  color: red;
+}
+main .wall img{
+  height: 600px;
+  width: 1400px;
+  margin-top: 20px;
+}
+main #div
+{
+  position: fixed;
+    z-index: 1000;
+    top: 150px;
+    right: -1px;
+    color: black;
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+main #div i
+{
+  margin-right: 5px;
+}
+main #div:hover
+{
+  background-color: rgb(40, 106, 204);
+  color: white;
+}
+
+.login-box
+{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  background-color: white;
+  border-radius: 20px;
+  height: 300px;
+  width: 450px;
+  z-index: 1000;
+}
+.login-box h1
+{
+  margin-top: 20px;
+ margin-bottom: 5px;
+ color: black;
+ margin-left: 30px;
+}
+
+main .login-box input
+{
+  margin-top: 30px;
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+   margin-left: 30px;
+   border-color: rgb(82, 6, 6);
+}
+main .login-box input:focus
+{
+  border-color: red;
+  outline: none;
+     color: rgb(82, 79, 79);
+}
+
+.login-box button
+{
+  margin-top: 35px;
+  height: 40px;
+  width: 400px;
+  background-color: rgb(255, 124, 2);
+  color: white;
+  border-radius: 10px;
+   margin-left: 30px;
+   cursor: pointer;
+   border-color: rgb(255, 124, 2);
+}
+.login-box p
+{
+  margin-top: 5px;
+  color: rgb(95, 92, 92);
+   margin-left: 30px;
+}
+.login-box p span
+{
+  color: red;
+  cursor: pointer;
+}
+
+.login-box #input
+{
+  display: flex;
+  color: rgb(95, 92, 92);
+}
+.login-box #input #slash
+{
+  position: absolute;
+    right: 110px;
+    top: 120px;
+}
+.login-box .country
+{
+    height: 20px;
+    border-radius: 50px;
+    right: 10px;
+    position: absolute;
+    top: 120px;
+    right: 65px;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+}
+
+.login-box #input #code
+{
+  position: absolute;
+   right: 30px;
+    top: 122px;
+    cursor: pointer;
+}
+
+section
+{
+   text-align: center;
+}
+
+section h1
+{ 
+ margin-top: 110px;
+}
+
+section .benefits
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+.benefits img
+{
+   margin-top: 30px;
+  height: 90px;
+}
+
+.benefits-detail
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 100px;
+  font-size: small;
+  margin-top: 20px;
+}
+.benefits-detail p
+{
+  color: dimgray;
+}
+.benefits-detail .firstdetail
+{
+  text-align: center;
+  margin-right: 60px;
+}
+
+.benefits-detail .seconddetail 
+{
+  text-align: center;
+    margin-right: 40px;
+}
+.benefits-detail .thirddetail
+{
+  text-align: center;
+  margin-right: 60px;
+}
+
+footer
+{
+  background-color: antiquewhite;
+   margin-top: 220px;
+   text-align: center;
+}
+
+.foothead
+{
+  font-size: x-large;
+  margin-top: 200px;
+}
+footer #middle
+{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+footer .footleft
+{
+  font-size: larger;
+  height: 250px;
+  color: rgb(58, 53, 53)
+}
+footer .footleft button
+{
+      height: 50px;
+    width: 150px;
+    background-color: rgb(15, 139, 255);
+    color: wheat;
+    font-size: larger;
+    margin-right: 400px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-color: rgb(15, 139, 255);
+    cursor: pointer;
+}
+footer .footleft button:hover{
+  background-color: rgb(66, 110, 110);
+  border-color: rgb(66, 110, 110);
+}
+footer .footright .footbox
+{
+  border: 2px solid;
+    border-radius: 20px;
+    height: 180px;
+    background-color: white;
+    border-color: white;
+    outline: none;
+    width: 600px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+footer .footright #footfirst span
+{
+  color: rgb(0, 81, 255);
+}
+footer .footright .footbox h1
+{
+  font-size: x-large;
+    margin-right: 150px;
+    margin-top: 30px;
+    color: rgb(29, 26, 26);
+}
+footer .footright .footbox p ,ul
+{
+  color: rgb(58, 53, 53);
+  margin-top: 15px;
+}
+footer .footright #footthird
+{
+  height: 250px;
+}
+footer .footright .footbox #footthird ,ul
+{
+      margin-right: 80px;
+    margin-left: 150px;
+}
+
+#program
+{
+  background-color: rgb(4, 4, 77);
+  margin-top: 150px;
+}
+#program h1{
+  color: white;
+  margin-bottom: 100px;
+}
+#program .port{
+  display: flex;
+  justify-content: space-around;
+}
+#program .portone
+{
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: white;
+}
+#program  #portleft h2
+{
+  margin-bottom: 30px;
+  color: red;
+  margin-top: 20px;
+  margin-right: 200px; 
+}
+#program  #portright h2
+{
+  margin-bottom: 30px;
+  color: red;
+  margin-top: 20px;
+  margin-right: 200px; 
+}
+#program #portleft p
+{
+  margin-bottom: 30px;
+  color: rgb(68, 66, 66);
+}
+
+#program #portright p
+{
+  margin-bottom: 30px;
+  color: rgb(68, 66, 66);
+}
+
+
+.check
+{
+   color: rgb(68, 66, 66);
+   background-color: rgba(27, 121, 121, 0.1); 
+   width: 400px;
+   margin-left: 40px;
+   height: 90px;
+
+}
+.check .checkone
+{
+  margin-top: 10px;
+  margin-right: 150px;
+  margin-bottom: 10px;
+}
+.check i
+{
+  color: rgb(8, 136, 255);
+}
+.check .checktwo
+{
+  margin-right: 58px;
+  margin-bottom: 10px;
+}
+.check .checkthree
+{
+    margin-right: 80px;
+}
+#program button
+{
+   height: 50px;
+    width: 150px;
+    background-color: rgb(255, 131, 15);
+    color: wheat;
+    font-size: larger;
+    margin-top: 60px;
+    border-radius: 10px;
+    border-color: rgb(255, 83, 15);
+    cursor: pointer;
+    margin-right: 270px;
+}
+@keyframes pull {
+  from
+  {
+    transform: translatey(10%);
+    direction: ltr;
+  }
+  to 
+  {
+    transform: translatey(-5%);
+    direction: rtl;
+  }
+}
+#program #portleft:hover
+{
+   animation: pull 2s infinite alternate-reverse;
+}
+#program #portright:hover
+{
+  animation: pull 2s infinite alternate-reverse;
+}
+
+.foot
+{
+      display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    background-color: rgb(241, 95, 42);
+}
+.foot .leftlast h1
+{
+  margin-left: 50px;
+  width: 500px;
+}
+.foot .rightlast
+{
+  margin-top: 60px;
+}
+.foot .rightlast #last
+{
+    background-color: rgb(241, 95, 42);
+    width: 200px;
+    border-color: white;
+    color: white;
+    background-color: transparent;
+}

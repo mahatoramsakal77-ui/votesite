@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daraz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navfirst">
+        <ul>
+          <li>
+            <a href="#" id="qr">SAVE MORE ON APP</a>
+          </li>
+          <li><a href="#" id="seller">BECOME A SELLER</a></li>
+          <li><a href="#" id="help">HELP&SUPPORT</a></li>
+          <li><a href="#" id="log">LOGIN</a></li>
+          <li><a href="#" id="sign">SIGN UP</a></li>
+          <li><a href="#" id="language">CHANGE LANGUAGE</a></li>
+        </ul>
+      </nav>
+
+      <nav class="navsecond">
+        <div class="logo"><img src="Daraz-logo.png" alt="Daraz" /></div>
+        <div class="search">
+          <input type="text" name="textbar" id="search" /><a href="#"
+            ><i class="fa-solid fa-magnifying-glass" id="searchicon"></i
+          ></a>
+        </div>
+        <a href="#"><i class="fa-solid fa-cart-arrow-down" id="cart"></i></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="leftimage">
+        <button class="prev">&#10094;</button>
+        <div class="slides">
+          <img src="wall.avif" alt="image" class="slide active" />
+          <img src="slide1.avif" alt="slide1" class="slide" />
+          <img src="slide2.avif" alt="slide2" class="slide" />
+          <img src="slide3.avif" alt="slide3" class="slide" />
+          <img src="slide4.avif" alt="slide4" class="slide" />
+          <img src="slide5.avif" alt="slide5" class="slide" />
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="rightimage">
+        <img src="qr.jpg" alt="QR IMAGE" />
+      </div>
+    </main>
+    <picture>
+      <div class="footerpic">
+        <img src="footer.webp" alt="images" />
+      </div>
+    </picture>
+
+
+    <portal-pop>
+      <div class="firsta">
+        <img src="scan.png" alt="" id="img">
+      </div>
+    </portal-pop>
+    <portal-pop>
+      <div id="box">
+      <li id="firstli"><i class="fa-solid fa-child"></i> <a href="#">Help center</a></li>
+      <li> <i class="fa-solid fa-phone"></i><a href="#">contact customer care</a></li>
+      <li> <i class="fa-solid fa-car"></i><a href="#">Shipping & Delivery</a></li>
+       <li><i class="fa-solid fa-mobile"></i><a href="#">Payment</a></li>
+        <li><i class="fa-brands fa-codepen"></i><a href="#">Order</a></li>
+      </div>
+    </portal-pop>
+    <!-- login box -->
+    <portal-pop>
+      <div id="login">
+        <h1>Password <span>|</span> Phone Number</h1> 
+        <div><input type="email/number" name="email or phone" value="enter your email or number" id="mail"></div>
+        <div><input type="password" name="password" value="password" id="pass"></div>
+        <span id="forgot">forgot password?</span>
+        <div class="btn"><button>Login</button></div>
+        <p>Don't have an account?<span>sign up</span></p>
+        <p id="or">or, login with</p>
+        <div class="loglogo">
+          <p><i class="fa-brands fa-google"></i>Google</p>
+        <p><i class="fa-brands fa-facebook"></i>Facebook</p>
+        </div>
+      </div>
+    </portal-pop>
+    <!-- Sign up box -->
+    <portal-pop>
+      <div id="login" class="signup">
+      <h1>Sign up</h1> 
+        <div class="inputfield">
+          <p>np+977</p>
+          <input type="number" name="phone" value="enter your number" id="phone">
+        </div>
+        <div class="policy">
+          <input type="checkbox">
+         <p>By creating and/or using your account,you agree to our <br> <span>Terms of Use</span> and <span>Privacy Policy</span></p>
+        </div>
+        <div><button class="whatsapp"><i class="fa-brands fa-whatsapp"></i>Send code via Whatsapp</button></div>
+       <button id="sms"><i class="fa-solid fa-phone"></i>Send code via SMS</button>
+        <p>already have an account? <span>Log in Now</span></p>
+        <p id="or">or, login with</p>
+        <div class="loglogo">
+          <p><i class="fa-brands fa-google"></i>Google</p>
+        <p><i class="fa-brands fa-facebook"></i>Facebook</p>
+        </div>
+      </div>
+    </portal-pop>
+<!-- language change event -->
+    <portal-pop>
+      <div class="lang">
+        <div class="leftlang">
+          <img src="australia-national-flag-vector-illustration_34480-760.avif" alt="" class="langphoto">English
+        </div>
+        <div class="rightlang">
+         <img src="nepal.png" alt="" class="langphoto"> Nepali
+        </div>
+      </div>
+    </portal-pop>
+    <script src="script.js"></script>
+  </body>
+</html>
