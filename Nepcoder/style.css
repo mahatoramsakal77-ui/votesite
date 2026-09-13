@@ -1,0 +1,677 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.burger
+{
+  display: none;
+}
+.close 
+{
+  display: none;
+}
+
+
+body {
+  background-color: rgb(20, 19, 19);
+  color: white;
+  overflow-x: hidden;
+}
+html
+{
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2vh 6vw;
+  color: white;
+  width: 100px;
+}
+.left-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: darkgrey;
+}
+.left-nav img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.left-nav h2 {
+  font-size: 1.05rem;
+  padding-top: 2vh;
+}
+.left-nav .line {
+  font-size: 2rem;
+  color: darkgrey;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+}
+
+
+.right-nav {
+  padding-left: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.right-nav ul a {
+  color: darkgray;
+  text-decoration: none;
+  font-size: 1.01rem;
+  width: 100%;
+}
+.right-nav ul a:hover {
+  color: rgb(187, 84, 0);
+}
+.right-nav ul {
+  list-style: none;
+}
+nav .end a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgb(187, 84, 0);
+  background-color: rgb(187, 84, 0);
+  padding: 0.5vw 1vw;
+  border-radius: 10px;
+  margin-left: 25vw;
+}
+
+/* ......................................................main section are here  */
+
+main {
+  text-align: center;
+  padding: 15vh;
+  /* background-color: rgba(43, 5, 5, 0.178); */
+}
+
+main .motivate-line {
+  color: rgb(248, 4, 4);
+  padding-bottom: 2.5vh;
+}
+
+main .main-detail h1 {
+  color: white;
+  font-size: 3.5rem;
+}
+main .main-detail h1 span {
+  border: 0.1px solid crimson;
+  background-color: rgba(178, 34, 34, 0.219);
+}
+main .main-detail p {
+  color: darkgrey;
+  font-size: 1.2rem;
+  padding-top: 2vh;
+}
+
+.main-detail img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+main .intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .intro-student {
+  color: darkgrey;
+  padding-left: 1vw;
+  font-size: 1.02rem;
+}
+main .intro-student span {
+  color: orangered;
+}
+
+main .btn {
+  margin-top: 3rem;
+  padding: 2vh 3vw;
+  background-color: rgb(187, 84, 0);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/*.................................... crating  large box */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+  width: 70%;
+  margin: auto;
+  border: 0.001px solid rgb(58, 58, 58);
+  border-radius: 20px;
+  background-color: rgba(43, 5, 5, 0.178);
+  max-height: 700px;
+}
+.main-section .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding-bottom: 4vh;
+  padding-top: 5vh;
+  padding-left: 2.5vh
+}
+.box .first-box {
+  height: 40vh;
+  width: 15vw;
+  border: 0.1px solid rgb(58, 58, 58);
+  border-radius: 20px;
+  z-index: 1000;
+  background-color: rgb(15, 14, 14);
+}
+.box .second-box {
+  height: 40vh;
+  width: 15vw;
+  border: 0.1px solid rgb(58, 58, 58);
+  border-radius: 20px;
+  z-index: 1000;
+  background-color: rgb(15, 14, 14);
+}
+.left-section .left-box {
+  height: 40vh;
+  width: 40vw;
+  border: 0.1px solid rgb(58, 58, 58);
+  margin-bottom: 3vh;
+  margin-left: 3vh;
+  border-radius: 20px;
+  z-index: 1000;
+  background-color: rgb(15, 14, 14);
+}
+.main-section .right-section {
+  height: 85vh;
+  width: 70vh;
+  border: 0.1px solid rgb(58, 58, 58);
+  margin-right: 2vw;
+  border-radius: 20px;
+  z-index: 1000;
+}
+/* first box in left that is insid a  large box */
+.first-box h1 {
+  font-size: 2rem;
+  padding-left: 1vw;
+  padding-top: 1vh;
+  color: brown;
+}
+.first-box h1 i {
+  color: red;
+}
+.first-box h2 {
+  font-size: 1rem;
+  padding-top: 1vh;
+  padding-left: 1vw;
+}
+.first-box p {
+  padding-top: 20vh;
+  padding-left: 1vw;
+}
+
+/* second box in left that is insid a  large box */
+.second-box h1 {
+  font-size: 2rem;
+  padding-left: 1vw;
+  padding-top: 1vh;
+  color: brown;
+}
+.second-box h1 i {
+  color: gold;
+  padding-right: 0.5vw;
+}
+.second-box h2 {
+  font-size: 1rem;
+  padding-top: 1vh;
+  padding-left: 1vw;
+}
+.second-box p {
+  padding-top: 20vh;
+  padding-left: 1vw;
+}
+
+/* left box in left that is insid a  large box */
+.main-section .left-box left-box-first {
+  padding: 1vh;
+}
+.main-section .left-box left-box-first h1 {
+  padding-left: 2vw;
+  font-size: 2.5rem;
+  padding-bottom: 2vh;
+}
+.main-section .left-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.main-section .left-box i {
+  padding-left: 2vw;
+  padding-top: 1vh;
+  font-size: 1.5rem;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding-right: 2vw;
+  margin-left: 2vw;
+}
+.main-section .left-box p {
+  font-size: 2.5rem;
+  padding-top: 3vh;
+  padding-left: 2vw;
+}
+/* styling on right box inside a large box */
+.main-section .right-section {
+  /* background-color: rgb(15, 14, 14); */
+  background-image: url(images.jfif);
+}
+.main-section .right-section h1 {
+  padding-left: 1vw;
+  padding-top: 1vh;
+}
+.main-section .right-section .btn {
+  margin-top: 24rem;
+  margin-left: 2rem;
+  padding: 2vh 1vw;
+  background-color: transparent;
+  border-style: solid;
+  border-color: darkgrey;
+  border-radius: 10px;
+  color: rgb(255, 0, 0);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.main-section .right-section .btn:hover {
+  background-color: coral;
+}
+
+/*....................     ........ this is styling of scrolling some copenies */
+scroll-section {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+scroll-section .scrolling {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25vh;
+  animation: scroll 17s infinite linear;
+}
+scroll-section .scrolling img {
+  height: 80px;
+  padding-left: 20vw;
+  border-radius: 20%;
+  flex: 0 0 5em;
+}
+@keyframes scroll {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+/*                                 Meeting grouped photo together styling them */
+photo-section {
+  text-align: center;
+  position: relative;
+  padding-top: 25vh;
+}
+photo-section h3 {
+  font-size: 1rem;
+  border: 0.01px solid rgb(61, 0, 0);
+  background-color: rgb(39, 18, 18);
+  color: darkgrey;
+  width: 10%;
+  margin: auto;
+  padding: 1vh;
+  margin-top: 25vh;
+}
+photo-section h1 {
+  font-size: 2rem;
+  width: 45%;
+  margin: auto;
+  padding-top: 4vh;
+}
+photo-section .meeting-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20vh;
+  flex-wrap: wrap;
+}
+
+photo-section .meeting-photo img {
+  height: 370px;
+  padding-left: 2vw;
+  padding-top: 5vh;
+  border-radius: 10%;
+}
+/*                           Arrow placing on meeting photose */
+photo-section .first-arrow {
+  position: absolute;
+  left: 21.5rem;
+  bottom: 440px;
+  border: 1px solid darkgrey;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+photo-section .second-arrow {
+  position: absolute;
+  left: 39rem;
+  bottom: 440px;
+  border: 1px solid darkgrey;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+photo-section .third-arrow {
+  position: absolute;
+  left: 54.8rem;
+  bottom: 440px;
+  border: 1px solid darkgrey;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+photo-section .fourth-arrow {
+  position: absolute;
+  left: 72.5rem;
+  bottom: 440px;
+  border: 1px solid darkgrey;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+/* ..........................button placing on meeting photos */
+photo-section .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  position: relative;
+  cursor: pointer;
+}
+photo-section .first-btn button {
+  padding: 1vh 1vw;
+  border: 1px solid chocolate;
+  background-color: rgb(206, 121, 90);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 450px;
+  left: 11.5rem;
+}
+
+photo-section .second-btn button {
+  padding: 1vh 1vw;
+  border: 1px solid chocolate;
+  background-color: rgb(206, 121, 90);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 450px;
+  left: 27rem;
+}
+photo-section .third-btn button {
+  padding: 1vh 1vw;
+  border: 1px solid chocolate;
+  background-color: rgb(206, 121, 90);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 450px;
+  left: 45rem;
+}
+photo-section .fourth-btn button {
+  padding: 1vh 1vw;
+  border: 1px solid chocolate;
+  background-color: rgb(206, 121, 90);
+  border-radius: 20px;
+  position: relative;
+  left: 10rem;
+  bottom: 450px;
+}
+photo-section .meeting-photo img:hover {
+  background-color: rgb(58, 13, 13);
+}
+/*............................................... courses Section HEre */
+course-section .big-box {
+  background-color: rgb(241, 241, 241);
+  padding: 5vh;
+  color: black;
+  border-radius: 20px;
+  z-index: 100;
+  padding-bottom: 15vh;
+  width: 90%;
+  margin: auto;
+}
+course-section .first-course {
+  text-align: center;
+}
+course-section .first-course h3 {
+  font-size: 1rem;
+  border: 0.01px solid rgb(61, 0, 0);
+  background-color: rgba(161, 0, 0, 0.671);
+  color: white;
+  width: 10%;
+  margin: auto;
+  padding: 1vh;
+  margin-top: 5vh;
+}
+course-section .first-course h1 {
+  font-size: 3rem;
+  padding-top: 4vh;
+}
+course-section .first-course button {
+  padding: 2vh 2vw;
+  border: 1px solid chocolate;
+  background-color: rgb(206, 121, 90);
+  border-radius: 20px;
+  margin-top: 3vh;
+  color: white;
+  margin-bottom: 8vh;
+}
+course-section .small-box {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+ flex-wrap: wrap;
+  padding: 2vh 5vw;
+}
+course-section .small-box .left-course img {
+  padding-top: 5vh;
+  height: 60.5vh;
+  border-radius: 20px;
+}
+course-section .small-box .right-course h1 {
+  font-size: 2.5rem;
+  padding-top: 6vh;
+}
+course-section .small-box .right-course p {
+  color: darkgrey;
+  font-size: 1.2rem;
+}
+course-section .small-box .right-course .contact {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 70px;
+  padding-top: 2vh;
+  flex-wrap: wrap;
+}
+course-section .small-box .right-course .contact i {
+  color: white;
+  border: 2px solid sandybrown;
+  border-radius: 50%;
+  padding: 1vw;
+  padding-left: 1vw;
+  background-color: sandybrown;
+  margin-right: 10px;
+}
+
+course-section .small-box .right-course .price {
+  display: flex;
+}
+
+course-section .small-box .right-course .price h1 span {
+  color: rgb(250, 98, 98);
+  font-size: 1.9rem;
+}
+course-section .small-box .right-course .price h3 {
+  font-size: 0.8rem;
+  padding-top: 9vh;
+  padding-left: 1vw;
+  text-decoration: line-through;
+}
+
+/*          ....BAck images with Nepcoders */
+ .back-image
+{
+  padding: 35vh 10vw;
+}
+
+.back-image section 
+{
+  text-align: center;
+  margin: auto;
+  z-index: 1000;
+  height: 100px;
+}
+.back-image section h1
+{
+  padding-bottom: 5vh;
+}
+.back-image section h1 span
+{
+ font-size: 1rem;
+  padding-left: 2vw;
+  padding-top: 1vh;
+  padding-right: 2vw;
+  padding-bottom: 1vh;
+  color: white;
+  background-color: rgba(165, 42, 42, 0.63);
+  border: 0.1px solid;
+  border-color: rgba(169, 169, 169, 0.445);
+}
+.back-image section button
+{
+  
+  padding: 2vh 1vw;
+  background-color:rgb(236, 142, 74);
+  border-style: solid;
+  border-color: darkgrey;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ...........................Header seection  */
+header
+{
+  padding-top: 10vh;
+  text-align: center;
+}
+header h1
+{
+  font-size: 40vh;
+  width: 100%;
+  color: rgba(151, 141, 141, 0.705);
+}
+header h1:hover
+{
+  color-scheme: initial;
+  cursor: grabbing;
+  color: rgb(116, 4, 4);
+}
+
+/* ......................................footer section */
+footer
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: white;
+  padding: 5vh 10vw;
+  
+}
+footer .left-foot img
+{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 2vh;
+}
+footer .left-foot a
+{
+  text-decoration: none;
+  padding: 0.5vw;
+}
+footer .left-foot  a i
+{
+  color: white;
+  font-size: 1.7rem;
+}
+
+footer .right-foot
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 60px;
+  margin-top: 2vh;
+
+}
+
+footer .right-foot a
+{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.418);
+  font-size: 1.2rem;
+    display: flex;
+ }
+ footer .right-foot a:hover
+ {
+  color: brown;
+ }
+footer .right-foot p
+{
+  color: rgba(255, 255, 255, 0.418);
+  padding-top: 2vh;
+}
+
+footer .right-foot .about 
+{
+  padding-top: 15vh;
+}
+
+footer .right-foot .company
+{
+  padding-top: 15vh;
+}
+
+footer .right-foot .contact 
+{
+  padding-top: 25vh;
+}
+ 

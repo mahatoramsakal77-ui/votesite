@@ -1,0 +1,357 @@
+/* Responsive for the 900 width */
+@media (max-width: 900px) {
+  nav {
+    position: relative;
+    width: 100%;
+  }
+  nav .left-nav {
+    padding-left: 0;
+    padding-right: 70vw;
+  }
+  /* This is the list option throught burger */
+  nav .right-nav {
+    position: relative;
+    /* flex-direction: column; */
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(58, 54, 54);
+
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: auto;
+
+    position: absolute;
+    top: 0px;
+    right: 0;
+    flex-direction: column;
+
+    transition: all 0.5s linear;
+    transform: translateX(100%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  nav .right-nav.active {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  nav .end ul a {
+    display: none;
+  }
+  .burger {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    z-index: 2000;
+  }
+  .close 
+  {
+    position: relative;
+    font-size: 2rem;
+    z-index: 2000;
+  }
+
+
+  .left-nav h2 {
+    font-size: 1rem;
+  }
+  header h1 {
+    font-size: 10rem;
+    width: 100%;
+    color: rgba(151, 141, 141, 0.705);
+    padding-left: 8vw;
+  }
+  main .main-detail h1 {
+    font-size: 3rem;
+  }
+  main .main-detail p {
+    font-size: 1.6rem;
+  }
+  main .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .intro-student {
+    font-size: 1.3rem;
+    padding-top: 1vh;
+  }
+  main .intro-student span {
+    color: orangered;
+  }
+  main .btn {
+    margin-top: 2rem;
+  }
+  .main-section {
+    flex-wrap: wrap;
+    width: 80%;
+    text-align: left;
+    max-height: 300rem;
+  }
+  .main-section .left-section {
+    flex-wrap: wrap;
+  }
+  .main-section .box {
+    gap: 20px;
+    padding-bottom: 0vh;
+    padding-top: 1.5vh;
+  }
+  .box .first-box {
+    height: 12vh;
+    width: 100%;
+  }
+  .first-box h1 {
+    font-size: 1.5rem;
+  }
+  .first-box h2 {
+    font-size: 1rem;
+  }
+  .first-box p {
+    padding-top: 1vh;
+    padding-left: 1vw;
+    font-size: 0.7rem;
+  }
+  .box .second-box {
+    height: 12vh;
+    width: 100%;
+  }
+  .second-box p {
+    padding-top: 1vh;
+    padding-left: 1vw;
+    font-size: 0.6rem;
+  }
+  .second-box h1 {
+    font-size: 1.5rem;
+  }
+  .second-box h2 {
+    font-size: 1rem;
+  }
+  .left-section .left-box {
+    height: 21vh;
+    width: 100%;
+    margin-bottom: 0vh;
+    padding-bottom: 0vh;
+    margin-top: 2vh;
+    margin-left: 0vh;
+  }
+  .main-section .left-box p {
+    font-size: 1rem;
+    padding-top: 2vh;
+    padding-left: 2vw;
+  }
+  .main-section .right-section {
+    height: 15vh;
+    width: 100%;
+  }
+  .main-section .right-section {
+    /* background-color: rgb(15, 14, 14); */
+    background-image: url(images.jfif);
+    background-repeat: no-repeat;
+    background-size: 90% 100%;
+    background-position: center;
+    height: 30rem;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+    margin-right: 0vw;
+  }
+  .main-section .right-section h1 {
+    font-size: 1.5rem;
+    color: red;
+    padding-left: 6vw;
+    padding-top: 0vh;
+  }
+  .main-section .right-section .btn {
+    margin-top: 19rem;
+    color: rgb(255, 18, 18);
+    padding-left: 6vw;
+  }
+  /* Course section  */
+  course-section {
+    width: 100%;
+  }
+  course-section .small-box .left-course img {
+    padding-top: 5vh;
+    height: 45vh;
+    border-radius: 40px;
+  }
+  course-section .small-box .right-course h1 {
+    font-size: 2.5rem;
+    padding-top: 2vh;
+  }
+  course-section .small-box .right-course .contact i {
+    color: red;
+    border: 2px solid sandybrown;
+    border-radius: 50%;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    background-color: sandybrown;
+    text-align: left;
+  }
+  course-section .small-box .right-course .price h3 {
+    font-size: 0.8rem;
+    padding-top: 4vh;
+    padding-left: 1vw;
+    text-decoration: line-through;
+  }
+  /* BAck images section */
+  .back-image section {
+    width: 100%;
+    font-size: 1.054rem;
+  }
+  footer {
+    flex-wrap: wrap;
+  }
+  footer .right-foot .about {
+    padding-top: 1vh;
+  }
+  footer .right-foot .company {
+    padding-top: 1vh;
+  }
+  footer .right-foot .contact {
+    padding-top: 7.5vh;
+  }
+}
+
+                                    /* Responsive for the 700 width */
+@media (max-width: 690px) {
+  
+  nav .left-nav {
+    padding-right: 65vw;
+  }
+  main {
+    text-align: center;
+    padding: 5vh;
+    /* background-color: rgba(43, 5, 5, 0.178); */
+  }
+  main .main-detail h1 {
+    font-size: 2.2rem;
+  }
+  main .main-detail p {
+    font-size: 1.3rem;
+  }
+  main .btn {
+    padding: 2vh 5vw;
+  }
+  .main-section {
+    width: 90%;
+  }
+  .first-box h1 {
+    font-size: 1.7rem;
+  }
+  .first-box h2 {
+    font-size: 0.7rem;
+  }
+  .first-box p {
+    font-size: 0.7rem;
+  }
+  .second-box h1 {
+    font-size: 1.7rem;
+  }
+  .second-box h2 {
+    font-size: 0.7rem;
+  }
+  .second-box p {
+    font-size: 0.7rem;
+  }
+  course-section .small-box .left-course img {
+    max-height: 24vh;
+  }
+  course-section .small-box .right-course .contact i {
+    padding: 1vh 2.5vw;
+  }
+  course-section .first-course h3 {
+    width: 30%;
+  }
+  course-section .first-course button {
+    padding: 2vh 6vw;
+  }
+  course-section .first-course h1 {
+    font-size: 2.7rem;
+  }
+  header h1 {
+    font-size: 7rem;
+    width: 100%;
+    color: rgba(151, 141, 141, 0.705);
+    padding-left: 8vw;
+  }
+  /*                       footer section  */
+  footer .left-foot {
+    margin-left: 17vw;
+  }
+
+  footer .right-foot {
+    flex-wrap: wrap;
+  }
+  footer .right-foot .contact {
+    padding-top: 1vh;
+  }
+}
+
+                                                  /* Responsive for 455 px */
+@media (max-width: 455px) {
+nav .left-nav {
+    padding-right: 40vw;
+  }
+  course-section .small-box .left-course img {
+    max-height: 22vh;
+  }
+  course-section .price h3 {
+    padding-right: 18vw;
+    margin-top: 4vh;
+  }
+course-section .first-course h1
+ {
+    font-size: 2rem;
+  }
+  course-section .small-box .right-course h1 {
+        font-size: 2rem;
+  }
+   course-section .small-box .right-course .price h3 {
+    font-size: 0.8rem;
+    padding-top: 5vh;
+   }
+  header h1 {
+    font-size: 6vh;
+    padding-left: 0;
+  }
+  photo-section h3 {
+    width: 30%;
+  }
+  photo-section h1 {
+    font-size: 1.2rem;
+  }
+  .back-image section {
+    font-size: 0.8rem;
+  }
+  .main-section .left-section .box {
+    flex-wrap: wrap;
+    margin-left: 0vw;
+    padding-left: 0;
+  }
+
+  .main-section .left-section .box .second-box {
+    width: 100%;
+    height: 12vh;
+  }
+  .main-section .left-section .left-box left-box-first h1 {
+    font-size: 3.5vh;
+  }
+  .main-section .left-section .left-box p {
+    font-size: 1.5vh;
+  }
+  footer {
+    text-align: left;
+    padding: 5vh 0vw;
+  }
+  footer .right-foot {
+    padding-left: 0vw;
+    margin-left: 0vw;
+  }
+}
