@@ -1,0 +1,266 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+     background-color: rgba(255, 255, 255, 0.493);
+}
+.nav
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0vh 2vw;
+   border-bottom: 1px solid rgb(209, 182, 180);
+}
+.nav .left-nav
+{
+  display: flex;
+  padding: 0.5vh 0;
+}
+.nav .nav-logo
+{
+  width: 90px;
+  height: 60px;
+}
+
+.left-nav h2
+{
+  padding-top: 1vh;
+  color: navy;
+}
+.left-nav h2 span
+{
+  font-size: 17px;
+  color: red;
+}
+.nav .right-nav .menu
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.nav .right-nav ul
+{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+.right-nav ul  li a 
+{
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.right-nav ul li a:hover
+{
+  color: red;
+}
+.right-nav .nav-avatar
+{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.right-nav button
+{
+  padding: 1vh 1vw;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: rgba(0, 0, 255, 0.836);
+}
+.right-nav .login
+{
+  padding: 1vh 1.5vw;
+}
+.right-nav   button:hover
+{
+   background-color: blue;
+}
+.right-nav   .register
+{
+  background-color: rgb(255, 0, 0);
+}
+.right-nav  .register:hover
+{
+  background-color: rgb(228, 68, 68);
+}
+
+.burger
+{
+  display: none;
+}
+.close
+{
+  display: none;
+  font-size: 26px;
+}
+.nav .right-nav .election-active
+{
+  color: red;
+  text-decoration: underline;
+}
+
+/* .....................................................................hero-section */
+.hero-section
+{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(212, 180, 180, 0.432);
+  border-radius: 10px;
+  margin: 15px;
+}
+.hero-section .left-hero h1
+{
+  font-size: 33px;
+  margin-bottom: 10px;
+  color: navy;
+  /* color: rgba(0, 0, 128, 0.753); */
+}
+.hero-section .right-hero img
+{
+  margin-top: 20px;
+ height: 170px;
+}
+
+/* .....................................................................election type */
+.election-type{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+.election-type .local,.province,.federal
+{
+  position: relative;
+  border: 1px solid rgb(255, 249, 249);
+  background-color: rgba(212, 198, 198, 0.13);
+  border-radius: 10px;
+  z-index: 12000;
+  padding: 0vh 1vw;
+  padding-bottom: 10px;
+}
+.election-type h1
+{
+  padding-top: 6px;
+  padding-bottom: 5px;
+  color: navy;
+}
+.election-type .demo-circle
+{
+  border-radius: 20px;
+  border: 0.1px solid white;
+  color: white;
+  text-align: center;
+  background-color: darkorange;
+    margin-top: 5px;
+    width: 35%;
+}
+.election-type .dot
+{
+  border: 3px solid white;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+.election-type .federal .demo-circle
+{
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .............................................................footer-up */
+.footer-up
+{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1vw;
+  align-items: center;
+  background-color: rgba(6, 6, 133, 0.911);
+  color: white;
+  /* flex-direction: column; */
+}
+.footer-up .links,.contact  li , a
+{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+.footer-up .main img
+{
+ width: 90px;
+  height: 60px;
+}
+.footer-up .main h4
+{
+  margin-bottom: 10px;
+}
+.footer-up .main i
+{
+  font-size: 25px;
+  margin-right: 5px;
+  color: powderblue;
+}
+.footer-up .links
+{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.footer-up .links h2
+{
+    margin-bottom: 10px;
+}
+.footer-up .download .getapp
+{
+  height: 140px;
+}
+/* ...........................................................footer */
+footer
+{
+   background-color: rgba(6, 6, 133, 0.911);
+
+}
+footer div
+{
+    color: white;
+  text-align: center;
+  align-items: center;
+  padding: 10px 10px;
+  border: 0.1px solid rgba(255, 255, 255, 0.438);
+  border-radius: 5px;
+}
+
+

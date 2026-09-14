@@ -1,0 +1,603 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+     background-color: rgba(255, 255, 255, 0.493);
+}
+.nav
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0vh 2vw;
+}
+.nav .left-nav
+{
+  display: flex;
+  padding: 0.5vh 0;
+}
+.nav .nav-logo
+{
+  width: 90px;
+  height: 60px;
+}
+
+.left-nav h2
+{
+  padding-top: 1vh;
+  color: blue;
+}
+.left-nav h2 span
+{
+  font-size: 17px;
+  color: red;
+}
+.nav .right-nav .menu
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.nav .right-nav ul
+{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+.right-nav ul  li a 
+{
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.right-nav ul li a:hover
+{
+  color: red;
+}
+.right-nav .nav-avatar
+{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.right-nav button
+{
+  padding: 1vh 1vw;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: rgba(0, 0, 255, 0.836);
+}
+.right-nav .login
+{
+  padding: 1vh 1.5vw;
+}
+.right-nav   button:hover
+{
+   background-color: blue;
+}
+.right-nav   .register
+{
+  background-color: rgb(255, 0, 0);
+}
+.right-nav  .register:hover
+{
+  background-color: rgb(228, 68, 68);
+}
+
+.burger
+{
+  display: none;
+}
+.close
+{
+  display: none;
+  font-size: 26px;
+}
+
+/* ...............................................................Hero section */
+.hero
+{
+  position: relative;
+}
+.hero .right-hero .hero-nepaloffice
+{
+  width: 100%;
+  height: calc(90vh);
+ }
+
+ .hero .left-hero
+ {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+
+  margin: 3%;
+  /* background-color: rgba(255, 255, 255, 0.397); */
+ }
+
+.hero .left-hero h2
+{
+   font-size: 50px;
+  color: rgb(241, 199, 11);
+}
+.hero .left-hero h1
+{
+  font-size: 40px;
+  /* color: rgb(241, 199, 11); */
+  color: white;
+}
+.hero .left-hero a{
+    text-decoration: none;
+
+}
+.hero .left-hero a i
+{
+  height: 100px;
+  width: 100px;
+  font-size: 20px;
+  font-style: italic;
+  color: rgba(185, 185, 241, 0.89);
+
+}
+.hero .left-hero .hero-paragraph
+{
+  color: white;
+  padding: 3vh 0;
+}
+.hero .hero-button
+{
+  padding: 2vh 2vw;
+
+  margin-top: 2vh;
+  margin-right: 2vw;
+  border: none;
+  background: rgba(255, 0, 0, 0.76);
+  border-radius: 10px;
+
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+.hero .hero-button:hover
+{
+  background-color: red;
+}
+.hero .register
+{
+  background-color: rgba(0, 0, 255, 0.801);
+}
+.hero .register:hover
+{
+  background-color: blue;
+}
+/* ...................................................................Notices */
+.notices
+{
+  position: relative;
+  /* margin-top: 25px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 1px solid white;
+  background-color: rgb(247, 237, 237);
+}
+
+.notices .left
+{
+  border: 1px solid white;
+  background-color: rgba(168, 147, 147, 0.644);
+  padding: 2vh 1vw;
+  border-radius: 5px;
+  width: 48%;
+ margin-top: 25px;
+  margin-bottom: 10px;
+
+  }
+.notices .left h1
+{
+  margin-bottom: 10px;
+  color: red;
+}
+.notices .left li
+{
+  list-style: none;
+  margin-top: 5px;
+  font-size: 18px;
+}
+.notices .left a 
+{
+  text-decoration: none;
+  color: red;
+}
+
+.notices .right
+{
+  border: 1px solid white;
+  background-color: rgba(168, 147, 147, 0.644);
+
+  width: 50%;
+  padding: 1vh 1vw;
+  border-radius: 5px;
+margin-top: 25px;
+  margin-bottom: 10px;
+
+}
+.notices .right h1
+{
+  margin-bottom: 5px;
+  color: red;
+}
+.notices .right .boxes
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.notices .right .box
+{
+  width: 30%;
+  padding:30px;
+  background: #f8efef57;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 0px;
+  /* margin-right: 35px; */
+}
+/* .................................................................NEPAL OVERVIEW */
+.nepal_overview
+{
+  border: 1px solid white;
+  background-color: rgb(247, 237, 237);
+  overflow: hidden;
+}
+.nepal_overview h1
+{
+    margin-top: 45px;
+  text-align: center;
+  margin-bottom: 45px;
+  color: red;
+
+}
+.nepal_overview .slide {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.nepal_overview .boxes2 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  animation: scroll 17s infinite linear;
+}
+.nepal_overview .slide .boxes2 .box{
+  width: 20%;
+  padding:20px 20px;
+  background: #463e3eb7;
+  border-radius: 10px;
+  margin-right: 35px;
+  flex: 0 0 250px;
+
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@keyframes scroll {
+   from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+/* .........................................................Election-property */
+.election_property
+{
+      position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 2vh 2vw;
+}
+.election_property .left-properties h2
+{
+      color: red;
+      margin-bottom: 10px;
+}
+.election_property .left-properties span
+{
+  color: blue;
+}
+
+.election_property .right-properties
+{
+  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+      text-align: center;
+}
+.election_property .right-properties h2
+{
+  margin-bottom: 10px;
+}
+.election_property .right-properties i
+{
+  font-size: 40px;
+  color: red;
+}
+.election_property .right-properties .box-secure,.box-private,.box-transparent,.box-easy
+{
+    width: 15%;
+    background-color: rgba(252, 252, 252, 0.719);
+}
+
+/* .............................................................footer-up */
+.footer-up
+{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1vw;
+  align-items: center;
+  background-color: rgba(4, 4, 70, 0.911);
+  color: white;
+  /* flex-direction: column; */
+}
+.footer-up .links,.contact  li , a
+{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+.footer-up .main img
+{
+ width: 90px;
+  height: 60px;
+}
+.footer-up .main h4
+{
+  margin-bottom: 10px;
+}
+.footer-up .main i
+{
+  font-size: 25px;
+  margin-right: 5px;
+  color: powderblue;
+}
+.footer-up .links
+{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.footer-up .links h2
+{
+    margin-bottom: 10px;
+}
+/* ...........................................................footer */
+footer
+{
+  background-color: rgb(2, 2, 22);
+}
+footer div
+{
+    color: white;
+  text-align: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+
+
+
+
+
+/* ..........................................................................Responsive in mobile */
+@media  screen and (max-width: 470px)  {
+   .nav
+   {
+     padding: 0vh 1vw;
+   }
+  .nav .nav-logo
+{
+  width: 70px;
+  height: 40px;
+}
+
+.right-nav  button
+{
+  font-size: 12px;
+  padding: 0.8h ;
+}
+.right-nav  .login
+{
+  padding: 0.8vh ;
+}
+.right-nav  .nav-avatar
+{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.left-nav h2
+{
+  font-size: 15px;
+}
+.left-nav h2 span
+{
+  font-size: 10px;
+}
+.nav
+{
+  justify-content: space-between;
+}
+.nav .right-nav .menu{
+  gap: 14px;
+}
+.nav .right-nav ul
+{
+  gap: 8px;
+}
+
+.hero .left-hero
+{
+ left: 5px;
+}
+.hero .left-hero h2
+{
+  font-size: 17px;
+}
+.hero .left-hero h1
+{
+  font-size: 18px;
+}
+.hero .right-hero .hero-nepaloffice
+{
+  width: 100%;
+  height: calc(50vh);
+ }
+ .hero .hero-button
+ {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 1.5vh 1.5vw;
+ }
+ .notices
+ {
+  width: 100%;
+  flex-direction: column;
+ }
+ .notices .left h1
+ {
+  font-size: 26px;
+ }
+  .notices .right h1
+ {
+  font-size: 26px;
+ }
+ .notices .left
+ {
+  width: 100%;
+  padding: 0vh 2vw;
+ }
+ .notices .right
+ {
+  width: 100%;
+    padding: 0vh 2vw;
+ }
+ .notices .right .box
+ {
+  padding: 10px;
+  width: 20%;
+  margin-bottom: 15px;
+ }
+
+ .election_property
+ {
+  flex-direction: column;
+ }
+.election_property .right-properties
+{
+  justify-content: space-between;
+  padding: 0vh 1vw;
+}
+.election_property .right-properties h2
+{
+  font-size: 16px;
+}
+.election_property .right-properties i
+{
+  font-size: 30px;
+}
+ .footer-up
+ {
+    justify-content: space-between;
+    padding: 0vh 0vw;
+    gap: 20px;
+ }
+ .nepal_overview h1
+ {
+  font-size: 26px;
+ }
+ 
+.burger
+{
+  display: block;
+  font-size: 23px;
+}
+.nav .right-nav .menus li a
+{
+  color: black;
+}
+.nav .right-nav .menus
+{
+  position: relative;
+    height: 50vh;
+    width: 40%;
+    background-color: rgb(255, 250, 250);
+
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: auto;
+
+    position: absolute;
+    top: 0px;
+    right: 0;
+    flex-direction: column;
+
+    transition: all 0.5s linear;
+    /* transform: translateX(100%); */
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+}
+.nav .right-nav .menus.active{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.close
+{
+      opacity: 1;
+    z-index: 2000;
+    color: black;
+    font-size: 26px;
+}
+
+  
+}
+
+
+

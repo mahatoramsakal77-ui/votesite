@@ -1,0 +1,316 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+     background-color: rgba(255, 255, 255, 0.493);
+}
+.nav
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0vh 2vw;
+   border-bottom: 0.1px solid rgb(241, 222, 222);
+}
+.nav .left-nav
+{
+  display: flex;
+  padding: 0.5vh 0;
+}
+.nav .nav-logo
+{
+  width: 90px;
+  height: 60px;
+}
+
+.left-nav h2
+{
+  padding-top: 1vh;
+  color: blue;
+}
+.left-nav h2 span
+{
+  font-size: 17px;
+  color: red;
+}
+.nav .right-nav .menu
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.nav .right-nav ul
+{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+.right-nav ul  li a 
+{
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.right-nav ul li a:hover
+{
+  color: red;
+}
+.right-nav .nav-avatar
+{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.right-nav button
+{
+  padding: 1vh 1vw;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: rgba(0, 0, 255, 0.836);
+}
+.right-nav .login
+{
+  padding: 1vh 1.5vw;
+}
+.right-nav   button:hover
+{
+   background-color: blue;
+}
+.right-nav   .register
+{
+  background-color: rgb(255, 0, 0);
+}
+.right-nav  .register:hover
+{
+  background-color: rgb(228, 68, 68);
+}
+
+.burger
+{
+  display: none;
+}
+.close
+{
+  display: none;
+  font-size: 26px;
+}
+/* .........................................................searching */
+
+.search
+{
+      background-color: rgba(240, 235, 235, 0.404);
+}
+.search h1
+{
+ /* padding-top: 3vh; */
+ margin-top: 20px;
+  text-align: center;
+  }
+.search form
+{
+  border: 1px solid white;
+    width: 50%;
+    border-radius: 10px;
+       background-color: white;
+        padding: 2vh 1vw;
+        margin: auto;
+}
+.search form label
+{
+  font-size: 20px;
+}
+.search form select
+{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.search form input
+{
+  height: 40px;
+  width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+  background-color: rgba(14, 14, 216, 0.562);
+  color: white;
+  cursor: pointer;
+}
+.search form input:hover
+{
+  background-color: blue;
+}
+/* ...................................................................candidate Mayor */
+.candidates
+{
+  text-align: center;
+  padding: 15vh 0;
+  display: none;
+}
+.shows
+{
+  display: block;
+}
+.candidates button
+{
+  width: 100%;
+  padding: 2vh 2vw;
+  font-size: 17px;
+  margin-bottom: 1px;
+  border-radius:10px;
+  border-color: white;
+  cursor: pointer;
+  background-color: rgba(101, 101, 117, 0.705);
+}
+.candidates button:hover
+{
+  background-color: blue;
+  color: white;
+}
+.candidates h1
+{
+      background-color: rgba(140, 155, 155, 0.11);
+}
+.for_mayer, .for_deputy, h2
+{
+  padding: 5vh 0;
+  /* color: red; */
+}
+.mayer
+{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.mayer .one_candidate,.two_candidate,.three_candidate
+{
+  background-color: rgba(199, 187, 171, 0.712);
+  border: 1px solid rgb(156, 142, 142);
+  border-radius: 10px;
+}
+.mayer .mayer_chhap
+{
+  height: 100px;
+  width: 100px;
+}
+
+.for_deputy
+{
+  padding: 10vh 0;
+}
+
+/* .....................................................................current governemtn */
+.current
+{
+  margin: 50px;
+  border-radius: 20px;
+  background-color: rgba(240, 235, 235, 0.404);
+  padding: 5vh 0;
+  text-align: center;
+  z-index: 9000;
+}
+.current_government
+{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.current_government .box
+{
+  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(247, 239, 239);
+  padding: 1vh 1vw;
+  z-index: 100000;
+}
+
+.current_government .president img
+{
+  height: 500px;
+  width: 100%;
+}
+
+/* ..........................................................footer-up */
+.footer-up
+{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1vw;
+  align-items: center;
+  background-color: rgba(4, 4, 70, 0.911);
+  color: white;
+  /* flex-direction: column; */
+}
+.footer-up .links,.contact  li , a
+{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+.footer-up .main img
+{
+ width: 90px;
+  height: 60px;
+}
+.footer-up .main h4
+{
+  margin-bottom: 10px;
+}
+.footer-up .main i
+{
+  font-size: 25px;
+  margin-right: 5px;
+  color: powderblue;
+}
+.footer-up .links
+{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.footer-up .links h2
+{
+    margin-bottom: 10px;
+}
+/* ...........................................................footer */
+footer
+{
+  background-color: rgb(2, 2, 22);
+}
+footer div
+{
+    color: white;
+  text-align: center;
+  align-items: center;
+  padding: 20px 10px;
+
+}
+
+.nav .right-nav .menu .menus .active
+{
+  color: red;
+  text-decoration: underline;
+}
