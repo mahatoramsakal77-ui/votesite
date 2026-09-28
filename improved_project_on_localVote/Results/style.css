@@ -1,0 +1,553 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+     background-color: rgba(255, 255, 255, 0.493);
+}
+.nav .right-nav .election-active
+{
+  color: red;
+  text-decoration: underline;
+}
+.nav
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0vh 2vw;
+  border-bottom: 1px solid rgb(209, 182, 180);
+}
+.nav .left-nav
+{
+  display: flex;
+  padding: 0.5vh 0;
+}
+.nav .nav-logo
+{
+  width: 90px;
+  height: 60px;
+}
+
+.left-nav h2
+{
+  padding-top: 1vh;
+  color: blue;
+}
+.left-nav h2 span
+{
+  font-size: 17px;
+  color: red;
+}
+.nav .right-nav .menu
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+     gap: 30px;;
+}
+.nav .right-nav ul
+{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+.right-nav ul  li a 
+{
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.right-nav ul li a:hover
+{
+  color: red;
+}
+.right-nav .nav-avatar
+{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.right-nav button
+{
+  padding: 1vh 1vw;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: rgba(0, 0, 255, 0.836);
+}
+.right-nav .login
+{
+  padding: 1vh 1.5vw;
+}
+.right-nav   button:hover
+{
+   background-color: blue;
+}
+.right-nav   .register
+{
+  background-color: rgb(255, 0, 0);
+}
+.right-nav  .register:hover
+{
+  background-color: rgb(228, 68, 68);
+}
+.nav-avatar {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    border: 2px solid white;
+
+    transition: 0.3s;
+}
+
+.nav-avatar:hover {
+    transform: scale(1.08);
+}
+.burger
+{
+  display: none;
+}
+.close
+{
+  display: none;
+  font-size: 26px;
+}
+
+        /* 
+           MAIN
+            */
+
+        .container {
+
+            width: 92%;
+
+            max-width: 1200px;
+
+            margin: 40px auto 70px;
+        }
+
+
+        .page-heading {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+
+        .page-heading h1 {
+
+            font-size: 34px;
+
+            color: #333;
+
+            margin-bottom: 10px;
+        }
+
+
+        .page-heading p {
+
+            color: #666;
+
+            font-size: 16px;
+        }
+
+
+        /* 
+           LOCATION SEARCH
+            */
+
+        .location-box {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 4px 18px
+                rgba(0, 0, 0, 0.08);
+
+            margin-bottom: 35px;
+        }
+
+
+        .location-box h2 {
+
+            margin-bottom: 20px;
+
+            color: #333;
+
+            font-size: 21px;
+        }
+
+
+        .location-form {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .field label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        .field select {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            background: white;
+        }
+
+
+        .search-btn {
+
+            margin-top: 20px;
+
+            padding: 12px 28px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #7569f0;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+
+        .search-btn:hover {
+
+            background: #5e52d8;
+
+        }
+
+
+        /* 
+           SELECTED LOCATION
+            */
+
+        .selected-location {
+
+            background: #7569f0;
+
+            color: white;
+
+            padding: 18px 22px;
+
+            border-radius: 12px;
+
+            margin-bottom: 35px;
+
+            text-align: center;
+
+            font-size: 17px;
+        }
+
+
+        /* 
+           POSITION SECTION
+            */
+
+        .position-section {
+
+            margin-bottom: 45px;
+        }
+
+
+        .position-title {
+
+            font-size: 27px;
+
+            margin-bottom: 18px;
+
+            color: #333;
+
+            border-left: 5px solid #7569f0;
+
+            padding-left: 12px;
+        }
+
+
+        .candidate-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .result-card {
+
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            box-shadow:
+                0 4px 15px
+                rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .result-card:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 7px 20px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        .candidate-name {
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+
+            color: #333;
+        }
+
+
+        .party-name {
+
+            color: #7569f0;
+
+            margin-bottom: 18px;
+
+            font-size: 15px;
+        }
+
+
+        .vote-number {
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+
+            color: #222;
+        }
+
+
+        .vote-label {
+
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .percentage {
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+
+            color: #555;
+        }
+
+
+        .progress {
+
+            width: 100%;
+
+            height: 10px;
+
+            background: #e8e8e8;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+
+        .progress-bar {
+
+            height: 100%;
+
+            background: #7569f0;
+
+            border-radius: 10px;
+
+        }
+
+
+        /* 
+           NO RESULTS
+            */
+
+        .no-results {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            color: #777;
+
+            box-shadow:
+                0 3px 12px
+                rgba(0, 0, 0, 0.06);
+        }
+
+
+        /* 
+           FOOTER
+            */
+
+        footer {
+
+            background: #202020;
+
+            color: white;
+
+            padding: 30px 6%;
+
+            text-align: center;
+        }
+
+
+        footer a {
+
+            color: #ddd;
+
+            text-decoration: none;
+
+            margin: 0 10px;
+        }
+
+
+        /* 
+           MOBILE
+            */
+
+        @media (max-width: 900px) {
+
+            .location-form {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .candidate-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .menu {
+
+                gap: 15px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+
+                padding: 15px 4%;
+            }
+
+
+            .menu {
+
+                display: none;
+            }
+
+
+            .container {
+
+                width: 94%;
+
+                margin-top: 25px;
+            }
+
+
+            .page-heading h1 {
+
+                font-size: 27px;
+            }
+
+
+            .location-form {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .candidate-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+   

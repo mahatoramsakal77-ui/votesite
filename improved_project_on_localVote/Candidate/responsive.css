@@ -1,0 +1,389 @@
+/*==== MOBILE - 470px==== */
+
+@media screen and (max-width: 470px) {
+  /* NAVBAR */
+  .nav {
+    width: 100%;
+    padding: 0 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2000;
+  } /* LEFT NAV */
+  .left-nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav .nav-logo {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+  }
+  .left-nav h2 {
+    font-size: 15px;
+    line-height: 1.1;
+  }
+  .left-nav h2 span {
+    font-size: 10px;
+  } /* RIGHT NAV */
+  .nav .right-nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav .right-nav .menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  } /* REGISTER */
+  .right-nav .register {
+    font-size: 12px;
+    padding: 0.8vh 1.5vw;
+  } /* LOGIN */
+  .right-nav .login {
+    font-size: 12px;
+    padding: 0.8vh 1.5vw;
+  } /* PROFILE */
+  .right-nav .nav-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  } /* BURGER */
+  .burger {
+    display: block;
+    font-size: 26px;
+    color: black;
+    cursor: pointer;
+    z-index: 3001;
+  } /* CLOSE BUTTON */
+  .close {
+    display: none;
+    position: fixed;
+    top: 12px;
+    right: 15px;
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    z-index: 3002;
+  } /* MOBILE MENU */
+  .nav .right-nav .menus {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 50vh;
+    background-color: rgb(255, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Hidden initially */
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 3000;
+  } /* MENU ITEMS */
+  .nav .right-nav .menus li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+  .nav .right-nav .menus li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .nav .right-nav .menus li a:hover {
+    background-color: #f0f0f0;
+  } /* OPEN MENU */
+  .nav .right-nav .menus.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  } /* LOCATION SEARCH */
+  .search {
+    width: 100%;
+    padding: 35px 5vw;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .search h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+  }
+  .search form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .search label {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .search select {
+    width: 100%;
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .search .submit_btn {
+    width: 100%;
+    min-height: 42px;
+    margin-top: 10px;
+    font-size: 15px;
+  } /* CANDIDATE SECTION */
+  .candidates {
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  .ward_4 {
+    width: 94%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .ward_4 > h1 {
+    font-size: 23px;
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 30px;
+  } /* CANDIDATE GROUP HEADINGS */
+  .for_mayer,
+  .for_deputy,
+  .for_wardchairperson {
+    width: 100%;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+  }
+  .for_mayer > h2,
+  .for_deputy > h2,
+  .for_wardchairperson > h2 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  } /* CANDIDATE CARDS */
+  .mayer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .one_candidate,
+  .two_candidate,
+  .three_candidate {
+    width: 100% !important;
+    max-width: 330px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+  } /* CANDIDATE NAME */
+  .one_candidate h2,
+  .two_candidate h2,
+  .three_candidate h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  } /* PARTY */
+  .one_candidate h3,
+  .two_candidate h3,
+  .three_candidate h3 {
+    font-size: 15px;
+    margin: 8px 0;
+  } /* CANDIDATE PHOTO */
+  .mayer_pic {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+  } /* PARTY SYMBOL */
+  .mayer_chhap {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 8px auto;
+  } /* VOTE BUTTON */
+  .vote_button {
+    width: 90%;
+    max-width: 220px;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+  } /* NO CANDIDATES MESSAGE */
+  .no_candidates {
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .no_candidates h2 {
+    font-size: 21px;
+  }
+  .no_candidates p {
+    font-size: 14px;
+    line-height: 1.6;
+  } /* CURRENT GOVERNMENT */
+  .current {
+    width: 100%;
+    padding: 35px 5vw;
+    box-sizing: border-box;
+  }
+  .current > h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .current_government {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .current_government .box {
+    width: 100% !important;
+    max-width: 330px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+  }
+  .current_government .box img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .current_government .box h2 {
+    font-size: 19px;
+  }
+  .current_government .box span {
+    font-size: 13px;
+  } /* FOOTER */
+  .footer-up {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 5vw;
+    gap: 35px;
+    box-sizing: border-box;
+  }
+  .footer-up .main,
+  .footer-up .links,
+  .footer-up .contact {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .footer-up .main img {
+    max-width: 70px;
+    height: auto;
+  }
+  .footer-up h2 {
+    font-size: 21px;
+  }
+  .footer-up h4 {
+    font-size: 14px;
+  }
+  .footer-up p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .footer-up .links li,
+  .footer-up .contact li {
+    list-style: none;
+    margin: 8px 0;
+  }
+  .footer-up .links a,
+  .footer-up .contact a {
+    font-size: 14px;
+    word-break: break-word;
+  } /* FOOTER */
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+} /*==== VERY SMALL MOBILE - 360px==== */
+@media screen and (max-width: 360px) {
+  .nav .nav-logo {
+    width: 55px;
+    height: 35px;
+  }
+  .left-nav h2 {
+    font-size: 13px;
+  }
+  .left-nav h2 span {
+    font-size: 8px;
+  }
+  .right-nav .register {
+    display: none;
+  }
+  .right-nav .login {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+  .right-nav .nav-avatar {
+    width: 28px;
+    height: 28px;
+  }
+  .burger {
+    font-size: 24px;
+  }
+  .nav .right-nav .menus {
+    width: 75%;
+  }
+  .nav .right-nav .menus li a {
+    font-size: 17px;
+  }
+  .search h1 {
+    font-size: 21px;
+  }
+  .ward_4 > h1 {
+    font-size: 20px;
+  }
+  .for_mayer > h2,
+  .for_deputy > h2,
+  .for_wardchairperson > h2 {
+    font-size: 18px;
+  }
+  .one_candidate h2,
+  .two_candidate h2,
+  .three_candidate h2 {
+    font-size: 18px;
+  }
+  .mayer_pic {
+    width: 110px;
+    height: 110px;
+  }
+  .current > h1 {
+    font-size: 22px;
+  }
+}

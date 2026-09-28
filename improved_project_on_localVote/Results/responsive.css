@@ -1,0 +1,257 @@
+/*  MOBILE  */
+@media screen and (max-width: 470px) {
+  /* ---------- NAVBAR ---------- */
+  .nav {
+    height: 60px;
+    padding: 0 1vw;
+  }
+  .nav .nav-logo {
+    width: 55px;
+    height: 38px;
+  }
+  .left-nav {
+    gap: 0px;
+  }
+  .left-nav h2 {
+    font-size: 16px;
+    line-height: 1;
+  }
+  .left-nav h2 span {
+    font-size: 8px;
+  } 
+  /* Hide normal menu */
+  .nav .right-nav .menus {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 50vh;
+    background-color: rgb(255, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 0;
+    margin: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.4s ease;
+  } /* Show menu */
+  .nav .right-nav .menus.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .menus li {
+    list-style: none;
+  }
+  .menus li a {
+    font-size: 18px;
+    text-decoration: none;
+  } /* Register / Login buttons */
+  .register,
+  .login {
+    font-size: 11px;
+    padding: 7px 10px;
+  } 
+  /* Profile image */
+  .nav-avatar {
+    width: 34px;
+    height: 34px;
+  } /* Burger */
+  .burger {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 2000;
+  } /* Close button */
+  .close {
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    z-index: 2001;
+  }
+   /* ---------- MAIN ---------- */
+  .container {
+    width: 92%;
+    margin: 25px auto;
+  } 
+  /* ---------- PAGE HEADING ---------- */
+  .page-heading {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .page-heading h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+  }
+  .page-heading p {
+    font-size: 13px;
+    line-height: 1.5;
+  } /* ---------- LOCATION SEARCH ---------- */
+  .location-box {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  .location-box h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .location-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .field {
+    width: 100%;
+  }
+  .field label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .field select {
+    width: 100%;
+    height: 43px;
+    font-size: 14px;
+    padding: 0 10px;
+    border-radius: 7px;
+  }
+  .search-btn {
+    width: 100%;
+    height: 44px;
+    margin-top: 15px;
+    font-size: 15px;
+  } /* ---------- SELECTED LOCATION ---------- */
+  .selected-location {
+    width: 100%;
+    margin: 20px 0;
+    padding: 13px 10px;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+    word-wrap: break-word;
+  } /* ---------- POSITION ---------- */
+  .position-section {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  .position-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 18px;
+  } /* ---------- CANDIDATE GRID ---------- */
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  } /* ---------- RESULT CARD ---------- */
+  .result-card {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .candidate-name {
+    font-size: 20px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+  .party-name {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .vote-number {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .vote-label {
+    font-size: 12px;
+  }
+  .percentage {
+    font-size: 17px;
+    margin-top: 8px;
+  } /* ---------- PROGRESS BAR ---------- */
+  .progress {
+    width: 100%;
+    height: 9px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    border-radius: 10px;
+  } /* ---------- NO RESULTS ---------- */
+  .no-results {
+    width: 100%;
+    padding: 18px 12px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5;
+  } /* ---------- FOOTER ---------- */
+  footer {
+    padding: 25px 15px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer a {
+    display: inline-block;
+    margin: 3px 7px;
+    font-size: 13px;
+  }
+} /*  VERY SMALL MOBILE  */
+@media screen and (max-width: 360px) {
+  .nav {
+    padding: 0 2vw;
+  }
+  .nav .nav-logo {
+    width: 48px;
+    height: 34px;
+  }
+  .left-nav h2 {
+    font-size: 14px;
+  }
+  .left-nav h2 span {
+    font-size: 7px;
+  }
+  .register,
+  .login {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+  .nav-avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .burger {
+    font-size: 22px;
+  }
+  .page-heading h1 {
+    font-size: 24px;
+  }
+  .location-box h2 {
+    font-size: 18px;
+  }
+  .position-title {
+    font-size: 20px;
+  }
+  .candidate-name {
+    font-size: 18px;
+  }
+  .vote-number {
+    font-size: 27px;
+  }
+}
