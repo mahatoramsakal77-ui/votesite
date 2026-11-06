@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: rgb(216, 202, 202);
+}
+.container
+{
+    position: absolute;
+    top: -10%;
+
+    transform: translate(100%,50%);
+    width: 30%;    
+    background-color: rgba(128, 128, 128, 0.87);
+
+    border-radius: 20px;
+    z-index: 1000;
+}
+.display{
+    display: block;
+}
+.container h2{
+    text-align: center;
+    margin-bottom: 20px;
+   padding-top: 2vh;
+   color: white;
+}
+
+.container form{
+    padding: 2vh 2vh 2vw 2vw;
+    z-index: 2000;
+      
+}
+
+.form-field input{
+    border: 1px solid black;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+
+    padding-left: 2vw;
+    border-radius: 5px;
+}
+
+.form-field input:focus{
+    outline: none;
+    border-color: blue;
+}
+
+.forget{
+    text-align: right;
+    margin-bottom: 20px;
+}
+.forget button{
+    height: 30px;
+    font-size: 17px;
+    background-color: rgba(255, 0, 0, 0.473);
+    color: white;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    cursor: pointer;
+}
+.forget button:hover{
+    background-color: brown;
+}
+
+.form-field input[type='submit']{
+    background-color: rgba(0, 0, 255, 0.384);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+.form-field input[type='submit']:hover{
+    background-color: rgba(10, 10, 85, 0.349);
+}
+
+.form-field p{
+    text-align: center;
+    color: white;
+}
+.form-field p a{
+    color: aqua;
+    font-size: 18px;
+}
+label{
+    font-size: 18px;
+    color: white;
+}
+
+
+
+/* ....................................login responsive */
+@media screen and (max-width: 768px) {
+
+    .container {
+        transform: translate(13%, 50%);
+        width: 80%;
+    }
+
+    .container h2 {
+        font-size: 4vw;
+        margin-bottom: 1vw;
+    }
+
+    .form-field input {
+        height: 8vw;
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    .forget {
+        margin-bottom: 2vh;
+    }
+
+    .forget button {
+        height: 5vw;
+        font-size: 2.5vw;
+
+    }
+
+    .form-field input[type='submit'] {
+        font-size: 3vw;
+    }
+
+    .form-field p {
+        font-size: 2.5vw;
+    }
+
+    .form-field p a {
+        font-size: 2.5vw;
+    }
+
+    label {
+        font-size: 2.8vw;
+    }
+
+}

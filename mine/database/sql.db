@@ -1,0 +1,29 @@
+
+//creating table for addProduct
+
+create database cms;
+use cms;
+create table products(
+ id int auto-increment,
+ title varchar(50),
+ description text,
+ price int(255),
+ stock int(255),
+ product_image BLOB(500),
+ product_type ENUM('admin','user')
+);
+
+// creating table for singup
+first_name,middle_name,last_name,email,password,contact,address,user_role
+use cms;
+create table user(
+  id int PRIMARY KEY auto_increment,
+  first_name varchar(50),
+  middle_name varchar(50),
+  last_name varchar(50),
+  email  UNIQUE varchar(255),
+  password varchar(255),
+  contact varchar(255),
+  address text,
+  user_role ENUM('admin','user')
+);

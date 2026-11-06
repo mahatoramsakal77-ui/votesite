@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container
+{
+    position: absolute;
+    transform: translate(50%,0%);
+    width: 50%;    
+    background-color: rgba(128, 128, 128, 0.87);
+
+    border-radius: 20px;
+    z-index: 1000;
+}
+.display{
+    display: block;
+}
+.container h2{
+    text-align: center;
+    margin-bottom: 20px;
+   padding-top: 2vh;
+   color: white;
+}
+
+.container form{
+    padding: 2vh 2vh 2vw 2vw;
+    z-index: 2000;
+      
+}
+.form-field input,select{
+    border: 1px solid black;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+
+    padding-left: 2vw;
+    border-radius: 5px;
+}
+
+.form-field input:focus{
+    outline: none;
+    border-color: blue;
+}
+
+.product{
+    margin-top: 10px;
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+}
+  .form-field .img img
+    {
+       object-fit: cover;
+       display: block;
+       
+       transform: translate(50%,10%);
+
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background-color: rgb(140, 180, 167);
+      margin-bottom: 10px;
+     }
+   
+    input[type='file']
+    {
+      display: none;
+    }
+
+
+.form-field input[type='submit']{
+    margin-top: 20px;
+    background-color: rgba(0, 0, 255, 0.384);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+.form-field input[type='submit']:hover{
+    background-color: rgba(10, 10, 85, 0.349);
+}
+
+.form-field p{
+    text-align: center;
+    color: white;
+}
+.form-field p a{
+    color: aqua;
+    font-size: 18px;
+}
+label{
+    font-size: 18px;
+    color: white;
+}
